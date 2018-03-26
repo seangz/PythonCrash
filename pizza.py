@@ -1,19 +1,14 @@
-pizzas = ['pepperoni', 'onion','sausage']
-friends_pizzas = pizzas[:]
+#Store Info about pizza being ordered
 
+pizza = {
+	'crust' : 'thick',
+	'toppings' : ['mushroom', 'extra cheese'],
+}
 
-for pizza in pizzas:
-    print("I like " + pizza + " pizza.")
+#Summarize the order.
 
-print("I really love pizza!")
+print("You ordered a " + pizza['crust'] + "-crust pizza " +
+	" with the following toppings:")
 
-pizzas.append('mushroom')
-friends_pizzas.append('bacon')
-
-print("\nMy favorite pizzas are:")
-for pizza in pizzas:
-	print(pizza)
-
-print("\nMy friend's are:")
-for pizza in friends_pizzas:
-	print(pizza)
+for topping in pizza['toppings']:
+	print("\t" + topping)
