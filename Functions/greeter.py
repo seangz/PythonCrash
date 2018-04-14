@@ -13,3 +13,9 @@ def favorite_book(book):
 
 
 favorite_book('the great gatsby')
+
+
+def display_message():
+	print("I'm learning about functions brah")
+
+display_message()
