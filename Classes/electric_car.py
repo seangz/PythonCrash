@@ -1,7 +1,7 @@
 class Car(object):
     """A simple attempt to represent a car"""
 
-    def __init__(self,make, model,year):
+    def __init__(self, make, model, year):
         self.make = make
         self.model = model
         self.year = year
@@ -31,8 +31,19 @@ class Car(object):
         self.odometer_reading += miles
 
 
-class ElectricCar(Car):
+class Battery():
+    """A simple attempt to model a battery for an electric car."""
 
+    def __init__(self, battery_size=70):
+        """Initialize the battery's attributes"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print battery size"""
+        print(self.battery_size)
+
+
+class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
 
     def __init__(self, make, model, year):
@@ -41,21 +52,11 @@ class ElectricCar(Car):
         Then initialize attributes specific to an electric car.
         """
         super(ElectricCar, self).__init__(make, model, year)
-        self.battery_size = 70
-
-    def describe_battery(self):
-        """Print battery size"""
-        print(self.battery_size)
-class Battery():
-    """A simple attempt to model a battery for an electric car."""
-
-    def __init__(self, battery_size=70):
-
+        self.battery = Battery()
 
 
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 
 print(my_tesla.get_descriptive_name())
 
-my_tesla.describe_battery()
-
+my_tesla.battery.describe_battery()
