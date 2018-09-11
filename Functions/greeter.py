@@ -18,3 +18,19 @@ while True:
 	formatted_name = get_formatted_name(f_name, l_name)
 	print("\nHello, " + formatted_name + "!")
 
+<<<<<<< HEAD
+=======
+def favorite_book(book):
+	"""Favorite Books"""
+	print("My favorite book is " + book.title())
+
+
+
+favorite_book('the great gatsby')
+
+
+def display_message():
+	print("I'm learning about functions brah")
+
+display_message()
+>>>>>>> 5ca132270be588e1ae4abb0eccc6736a5943ab4f
